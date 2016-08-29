@@ -1,0 +1,12 @@
+<h1>Search for Movies and Series</h1>
+<form action='<%= searchs_path %>'>
+	<input name='q' type='text'>
+	<button>Pesquisar</button>
+</form>
+<br>
+<p><strong><%= @message %></strong></p>
+<hr>
+<% @results.each do |result| %>
+	<%= render partial: 'movie', locals: {document_id: result.searchable_id} if result.searchable_type == 'Movie' %>
+	<%= render partial: 'serie', locals: {document_id: result.searchable_id} if result.searchable_type == 'Serie' %>
+<% end %>

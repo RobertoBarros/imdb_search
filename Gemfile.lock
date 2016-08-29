@@ -91,6 +91,10 @@ GEM
       mini_portile2 (~> 2.1.0)
       pkg-config (~> 1.1.7)
     pg (0.18.4)
+    pg_search (1.0.6)
+      activerecord (>= 3.1)
+      activesupport (>= 3.1)
+      arel
     pkg-config (1.1.7)
     pry (0.10.4)
       coderay (~> 1.1.0)
@@ -180,6 +184,7 @@ DEPENDENCIES
   jquery-rails
   listen (~> 3.0.5)
   pg
+  pg_search
   pry-byebug
   pry-rails
   puma

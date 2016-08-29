@@ -1,4 +1,11 @@
 <h1>Filmes</h1>
+<form action='<%= movies_path %>'>
+	<input name='q' type='text'>
+	<button>Pesquisar</button>
+</form>
+<br>
+<p><strong><%= @message %></strong></p>
+<hr>
 <% @movies.each do |movie| %>
 	<h3><%= movie.title %> (<%= movie.year %>)</h3>
 	<p>

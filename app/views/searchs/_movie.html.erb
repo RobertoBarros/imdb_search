@@ -1,0 +1,10 @@
+<% result = Movie.find(document_id) %>
+
+<h4>Movie</h4>
+<h3><%= result.title %> (<%= result.year %>)</h3>
+<p>
+	Diretor:
+	<strong><%= result.director.first_name %> <%= result.director.last_name %></strong>
+</p>
+<p><%= result.syllabus %></p>
+<hr>
